@@ -1,32 +1,22 @@
 # Prop Manager
 
-Simple Android app to manage FPV drone propeller inventory. Track CW and CCW stock per prop type, with low-stock warnings.
+Simple Android app to manage FPV drone propeller inventory. Track CW and CCW stock per prop type, with configurable low-stock warnings.
 
 Built with Flutter + Material 3.
 
 ## Features
 
-- Add prop types with name and initial CW/CCW counts
+- Add prop types with name, initial CW/CCW counts, and optional order link
 - **+ / −** buttons to adjust stock when buying or breaking props
-- Red card background when CW or CCW drops below threshold
+- **Edit** prop details (name, counts, order link) via pen icon on each card
+- **Order link** — tap "Bestellen" on any prop card to open its shop URL in browser
+- Red card background when CW or CCW drops below the threshold
 - Red warning banner when any prop type is critically low
-- Data persists locally as JSON
-
-## Changing the Warning Threshold
-
-Edit `lib/main.dart`, line ~7:
-
-```dart
-// Change this to adjust the low-stock warning threshold
-const int criticalThreshold = 10;
-```
-
-Change `10` to whatever number you want (e.g., `5` if you want the warning later, `20` for earlier). Then rebuild:
-
-```bash
-flutter build apk --release
-adb install build/app/outputs/flutter-apk/app-release.apk
-```
+- **Settings screen** (gear icon) to configure:
+  - **Theme**: Light / Dark / Follow system
+  - **Critical threshold**: stock level that triggers the warning (default 10)
+- Dark mode by default, Material 3 design
+- Data persists locally as JSON (`props.json` + `settings.json`)
 
 ## Build from Source
 
