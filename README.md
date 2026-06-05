@@ -1,3 +1,4 @@
+## I DIDNT MAKE THIS I AM SIMPLY BUILDING A .IPA FILE
 # Prop Manager
 
 Simple Android app to manage FPV drone propeller inventory. Track CW and CCW stock per prop type, with configurable low-stock warnings.
